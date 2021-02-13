@@ -18,7 +18,8 @@ const ChatFeed = (props) => {
                 <div key={`msg_${index}`} style={{ width: '100%' }}>
                     <div className="message-container">
                         {
-                            isMyMessage ? <ClientMessage/> : <ReceivedMessage/>
+                            isMyMessage ? <ClientMessage message={message} /> :
+                            <ReceivedMessage message={message} lastMessage={messages[lastMessageKey]} />
                         }
                     </div>
                     <div className="read-receipts" style={{ marginRight: isMyMessage ? '18px' : '0px', marginLeft: isMyMessage ? '0px' : '68px'}}>
