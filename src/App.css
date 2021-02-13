@@ -103,7 +103,7 @@
     margin-left: 18px;
   }
   
-  .message-block {
+  .message-container {
     width: 100%;
     display: inline-block;
   }
@@ -225,7 +225,7 @@
   }
   
   .input {
-    color: #333;
+    color: #333 !important;
     font-size: 1.2rem;
       margin: 0 auto;
     padding: 1.5rem 2rem;
@@ -239,6 +239,7 @@
     outline: none;
     margin-bottom: 25px;
   }
+  
   
   .form {
     width: 400px;

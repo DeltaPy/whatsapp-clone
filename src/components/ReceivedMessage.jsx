@@ -5,7 +5,7 @@ const ReceivedMessage = ( lastMessage, message ) => {
             {isFirstMessageByUser && (
                 <div 
                     className="message-avatar"
-                    style={{backgroundImage: `url(${message?.sender?.avatar})`}}
+                    style={{backgroundImage: message.sender && `url(${message?.sender?.avatar})`}}
                 />
             )}
             {message?.attachments?.length > 0 
@@ -17,7 +17,7 @@ const ReceivedMessage = ( lastMessage, message ) => {
                         style={{marginLeft: isFirstMessageByUser ? '4px' : '48px' }}
                     />
                 ) : (
-                    <div className="message" style={{float: 'left', marginLeft: isFirstMessageByUser ? '4px' : '48px', background_color: "#CABCDC" }}>
+                    <div className="message" style={{float: 'left', marginLeft: isFirstMessageByUser ? '4px' : '48px', backgroundColor: '#CABCDC' }}>
                         {message.text}
                     </div>
                 )}
